@@ -242,20 +242,34 @@ first div in the grid  and place it in the grid. */
 
  
   /* Step 10: Write the selector/rule property to update the .container class */
-  /* .container{
-    display: grid;
-    grid-template-columns: 50px auto 500px auto 50px;
-  }
-  
-  .about, .clients, .method-image, .contact-image{
-    grid-column-start: 3/5;
-    
-  }
-  .method, .contact, .about-image, and .clients-image{
-    grid-column-start: 2/4;
-    
-  } */
+
 
   /* Steps 11 and 12: Update the grid-column property of the grid's children (where-needed)*/
+  @media screen and (min-width: 800px) {
+  
+    ul {
+      padding: 30px 0;
+      text-align: right;
+    }
+  
+    .container {
+      grid-template-columns: 50px auto 500px auto 50px;
+    }
+  
+    .about,
+    .clients,
+    .method-image,
+    .contact-image {
+      grid-column: 3 / 5;
+    }
+  
+    .method,
+    .contact,
+    .about-image,
+    .clients-image {
+      grid-column: 2 / 4;
+    }
+  }
+
 
 
